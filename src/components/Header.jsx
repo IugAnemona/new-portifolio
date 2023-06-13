@@ -1,4 +1,4 @@
-import logo from "../img/icon.png";
+import logo from "../img/Logo.jpg";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import "../styles/components/header.sass";
