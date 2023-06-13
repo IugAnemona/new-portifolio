@@ -1,0 +1,22 @@
+@use '../variables'
+
+    
+#portfolio
+    display: flex
+    flex-wrap: wrap
+    padding: 3rem
+    padding-top: 10rem
+    gap: 3rem
+
+    @media (max-width: variables.$sm-breakpoint)
+        padding: 0rem
+        padding-top: 10rem 
+        
+
+    h1
+        width: 100%
+        font-size: 5rem
+        margin-bottom: 4rem
+        background: variables.$gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
