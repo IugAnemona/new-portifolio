@@ -1,0 +1,130 @@
+@use '../variables'
+@use '../mixins'
+
+    
+#project-content
+    background-color: variables.$main-color
+    flex: 2 1 0
+    border-radius: variables.$container-border-radius
+    padding: 3rem
+    min-width: 500px
+
+    @media (max-width: variables.$sm-breakpoint)
+        min-width: 400px
+        padding: 2rem
+        
+
+    section
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+        .title
+                    flex-grow: 1
+                    width: 100%
+                    color: variables.$second-color
+                    font-size: 2rem
+                    margin-bottom: 1.3rem
+                    @include mixins.center
+                    justify-content: start
+                    gap: 1rem
+
+                    &:after
+                        @include mixins.gradient-border
+
+            
+
+    
+
+        .content
+            display: flex
+            margin: 1rem
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+            background-color: #001220
+            border-radius: variables.$card-border-radius
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            max-width: 800px
+
+            @media (min-width: variables.$sm-breakpoint)
+                flex-direction: row-reverse
+    
+            .description-content
+                flex: 1
+                padding: 1rem
+                text-align: center
+                min-width: 370px
+                max-width: 470px
+
+
+                .tech-container
+                    font-size: 4rem
+                    display: flex
+                    justify-content: center
+
+
+                    #html
+                        svg
+                            color: #E44D26 
+                    #css
+                        svg
+                            color: #1572b6 
+                    #js
+                        font-size: 3rem
+                        margin: 6px
+                        svg
+                            color: #f0db4f
+                    #react
+                        svg
+                            color: #61dafb 
+                    #tailwindcss
+                        svg
+                            color: #E44D26 
+                    #sass
+                        svg
+                            color: #CE679A 
+                    #vuejs
+                        svg
+                            color: #3FB984 
+
+
+                h3
+                    color: variables.$second-color
+                    font-size: 1.8rem
+                    margin-bottom: 1.3rem
+                    @include mixins.center
+                    justify-content: center
+                    gap: 1rem
+
+                
+                p
+                    color: variables.$second-color
+                    margin-bottom: 1rem
+                    line-height: 1.4rem
+
+
+            .img-content
+                flex: 1
+                display: flex
+                flex-direction: column
+                padding: 1rem
+
+
+                img
+                    max-width: 300px
+                    margin: 0 auto
+                    @media (min-width: variables.$sm-breakpoint)
+                        max-width: 350px
+
+
+            .link
+                flex-grow: 1
+                display: flex
+                justify-content: center
+                width: 100%
+                padding: 2rem
+
+            
+        .btn
+            @include mixins.btn
