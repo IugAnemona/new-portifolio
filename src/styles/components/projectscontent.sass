@@ -7,6 +7,7 @@
     flex: 2 1 0
     border-radius: variables.$container-border-radius
     padding: 3rem
+    // padding-top: 1rem
     min-width: 500px
 
     @media (max-width: variables.$sm-breakpoint)
@@ -39,12 +40,14 @@
         .content
             display: flex
             margin: 1rem
+            padding: 0.5rem
             flex-wrap: wrap
             justify-content: center
             align-items: center
-            background-color: #001220
+            background-color: variables.$second-color
             border-radius: variables.$card-border-radius
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            box-shadow: variables.$shadow-container
+            border: solid 1px #333
             max-width: 800px
 
             @media (min-width: variables.$sm-breakpoint)
@@ -56,6 +59,8 @@
                 text-align: center
                 min-width: 370px
                 max-width: 470px
+                box-shadow: variables.$card-shadow
+
 
 
                 .tech-container
@@ -90,7 +95,7 @@
 
 
                 h3
-                    color: variables.$second-color
+                    color: variables.$main-color
                     font-size: 1.8rem
                     margin-bottom: 1.3rem
                     @include mixins.center
@@ -99,7 +104,7 @@
 
                 
                 p
-                    color: variables.$second-color
+                    color: variables.$main-color
                     margin-bottom: 1rem
                     line-height: 1.4rem
 
@@ -109,11 +114,17 @@
                 display: flex
                 flex-direction: column
                 padding: 1rem
+                
+
+                
 
 
                 img
+                    border-radius: variables.$container-border-radius
+                    box-shadow: variables.$shadow-container
                     max-width: 300px
                     margin: 0 auto
+
                     @media (min-width: variables.$sm-breakpoint)
                         max-width: 350px
 
